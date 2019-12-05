@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>
+            Digitery-A Place of Digital Marketing
+        </title>
+    </head>
+    <body>
+        <!-- NavBar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-size:22px; padding-left:2rem;">
+            
+                <a class="navbar-brand" href="./index.html">
+                    <div style="height: 150px; background-color: rgba(255,0,0,0.1);">
+                <div class="h-100 d-inline-block" style="width: 100px; background-color: rgba(0,0,255,.1)">
+                    <img src="digitery.jpg" style="width:120px; height:150px; border-radius: 12px;"/>
+                </div>
+                </div></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="padding-left:2rem;">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active" style="padding-left:2rem;">
+                  <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" style="padding-left:2rem;">
+                  <a class="nav-link" href="./about.html">About</a>
+                </li>
+                <li class="nav-item dropdown" style="padding-left:2rem;">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Services
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="./smm.html">Social Media Marketing</a>
+                                <a class="dropdown-item" href="./seo.html">Search Engine Optimization</a>
+                                <a class="dropdown-item" href="./cw.html">Content Writing</a>
+                            </div>
+                      </li>
+                      
+                <li class="nav-item" style="padding-left:2rem;">
+                        <a class="nav-link" href="./blog.html">Blog</a>
+                      </li>
+                      
+                <li class="nav-item" style="padding-left:2rem;">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                      </li>
+
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+
+          <!-- Body Content -->
+          <div class="w-100 p-3" style="background-color:rgb(212, 211, 211);"><h1 style="text-align: center;font-size:62px;"><b>Contact Us</b></h1></div>
+          <div class="w-100 p-3" style="background-color:rgb(212, 211, 211);"><h2 style="text-align: center;font-size:32px;">Fill out the form below to get your Free Proposal.</h2></div>
+          
+
+          <div class="row" style="padding: 5rem;">
+              <div class="col-md-8" >
+                    <form method="POST" action='./contact.php'>
+                            <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <label for="firstname">First Name</label>
+                                      <input type="text" class="form-control" id="firstname" name="fname" placeholder="First Name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label for="lastname">Last Name</label>
+                                      <input type="text" class="form-control" id="lastname" name="lname" placeholder="Last Name">
+                                    </div>
+                                  </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="emailid">Email</label>
+                                <input type="email" class="form-control" id="emailid" name="emailid" placeholder="something@example.com">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="phone">Phone</label>
+                                <input type="number" class="form-control" id="phone" name="phone" placeholder="+91-12345567890">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="company">Company/Organisation</label>
+                              <input type="text" class="form-control" name="company" id="company">
+                            </div>
+                            <div class="form-group">
+                              <label for="web">Website</label>
+                              <input type="text" class="form-control" name="web" id="web" placeholder="https://">
+                            </div>
+                            <div class="form-group">
+                              <div class="form-check">
+                                    <label class="form-check-label" for="gridCheck">
+                                            What services can we provide you?
+                                          </label>
+                                <br/><input class="form-check-input" type="checkbox" name="service[]" id="service" value="SEO">Search Engine Optimization(SEO)
+                                <br/>
+                                <input class="form-check-input" type="checkbox" name="service[]" id="service" value="Social Media Marketing">Social Media Marketing(SMM)
+                                <br/>
+                                <input class="form-check-input" type="checkbox" name="service[]" id="service" value="Content Writing">Content Writing
+                                
+                            </div>
+                            <label>Message</label>
+                                <input type="text" class="form-control" name="msg" id="msg" onchange="check()">
+                            
+                            </div>
+                            <button type="submit" class="btn btn-dark" value="Submit" >Submit</button>
+                            <button class="btn btn-dark" id="download" name="download" value="Download" enabled onclick="download()"><p id="downlbl" style="display: inline;">Download</p><div style="display:none" id="downbtn"><a href="./quotation.pdf" target="_blank">Download</a></div></button>
+                            <p id="downinfo" style="display: none;">Click on the Download to Download the brochure.</p>
+                        </form>
+              </div>
+
+              <div class="col-md-4">
+                    <div class="card" style="width:28rem">
+                           
+                        <div class="card-body">
+                          <h4 class="card-title"> <b>Main Phone:</b><p>+91-7014578875</p><br/> <b>HeadQauters:</b><p>A-8, Sethi Colony, Jaipur</p><b>Office hours:</b><p>Mon-Fri,10:00am-5:00pm IST</p></h4> 
+                          <p class="card-text"></p>
+                          </div>
+                          <img class="card-img-top" src="hqq.jpg" style="width: 28rem; height:25rem;" alt="Card image cap">
+                      </div>
+              </div>
+          </div>
+          
+          <!-- Footer -->
+
+                          <div class="row justify-content-around" style="padding:5rem;">
+                                <div class="col-4">
+                                        <img src="digitery.jpg" style="width:120px; height:160px; border-radius: 12px;"/>
+                                        <p>Digitery Internet Marketing Agency is a full-service digital marketing agency. Attract, Impress, and Convert more leads online and get results with Digitery.</p>
+                                    </div>
+                                <div class="col-4" style="padding-left:7.5rem;">
+                                        <img src="digitery.jpg" style="width:300px; height:350px; border-radius: 12px;"/>
+                                    
+                                </div>
+                                <div class="col-4">
+                                    <div style="padding-left: 5rem;">
+                                        <a href="https://www.facebook.com/cafe_Dekho-538749219908056/"><img src="facebook.png" style=" border-radius: 12px;display: inline; width:50px"> </a>
+                                        <a href="https://www.instagram.com/cafe_dekho/"><img src="instagram.png" style="border-radius:12px;display: inline; width:50px"> </a>
+                                    </div>
+                                    <div style="padding-left:5rem;">
+                                        <h3>CALL +91-7014578875</h3>
+                                        <h6>Contact Us> Give Us Your Response</h6>
+
+                                    </div>
+                                </div>
+                              </div>
+
+                              <footer style="background-color:#343A40; color:antiquewhite;">
+                                    <div class="w-100 p-3" style="background-color:#343A40;"><h1 style="text-align:center;font-size:52px;">Growing Businesses Since 2019</b></h1></div>
+                                    <div class="w-100 p-3" style="background-color:#343A40;"><h2 style="text-align:center;font-size:32px;">Made with <img style="width:32px;height:30px" alt="Favorite Heart Button" src="https://thriveagency.com/wp-content/themes/thrive-agency/images/favorite-heart-buttonfinal.svg" data-lazy-src="https://thriveagency.com/wp-content/themes/thrive-agency/images/favorite-heart-buttonfinal.svg" class="lazyloaded" data-was-processed="true"> in 12 cities around the India</h2></div>
+                                    <div class="container" style="background-color:#343A40 ;">
+                                            <div class="row">
+                                              <div class="col-md-4">
+                                                <h3>Jodhpur</h3>
+                                                <h3>Jaipur</h3>
+                                                <h3>Ajmer</h3>
+                                                <h3>Udaipur</h3>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <h3>Delhi</h3>
+                                                <h3>Gurgaon</h3>
+                                                <h3>Noida</h3>
+                                                <h3>Faridabad</h3>
+                                              </div>
+                                              <div class="col-md-4">
+                                                    <h3>Chennai</h3>
+                                                    <h3>Bangalore</h3>
+                                                    <h3>Mumbai</h3>
+                                                    <h3>Lucknow</h3>
+                                              </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="w-100 p-3" style=" color:rgb(0, 0, 0);background-color:rgb(253, 207, 4);"><h3 style="text-align: center;font-size:18px;">&copy;2019 DIGITERY-Internet Marketing Agency</h3></div>
+                          
+                                    </footer>
+                          <script>
+                              function check(){
+                                  fname= document.getElementById("firstname").value;
+                                  lname= document.getElementById("lastname").value;
+                                  email = document.getElementById("emailid").value;
+                                  phone = document.getElementById("phone").value;
+                                  web = document.getElementById("web").value;
+                                  company = document.getElementById("company").value;
+                                  service = document.getElementById("service").value;
+                                  msg = document.getElementById("msg").value;
+                                  console.log("new");
+                                  console.log(service);
+                                  if(fname!==" " || lname!=="" || email!==""||phone!==""||web!==""||company!==""||service!==""||msg!==""){
+                                      console.log("new1");
+                                      document.getElementById('download').disabled=false;
+                                      document.getElementById('downbtn').style.display='inline';
+                                      document.getElementById('downlbl').style.display='none';
+                                      document.getElementById('downinfo').style.display='inline';
+                                  }
+                                  console.log("new2");
+
+                              }
+                          </script>
+                                    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
